@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>memory station</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+
+		<!-- Import the component -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+        <!-- Use it like any other HTML element -->
+        <div class="model" onclick="application.goToTargetView(event)" id="new_page">
+            <model-viewer 
+            alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" 
+            src="gltf/记忆宇宙.gltf" 
+            ar environment-image="texture/moonless_golf_4k.hdr" 
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y" 
+            auto-rotate 
+            rotation-per-second="15deg"
+            interaction-prompt="none"
+            poster="gltf/截屏2023-01-08 下午3.44.50.webp"
+            >
+
+            </model-viewer>
+        </div>
+
+	</body>
+</html>
+
