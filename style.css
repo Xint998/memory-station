@@ -22,6 +22,7 @@ model-viewer {
     height:70vh;
     top:15vh;
     left:15vw;
+    overflow:visible;
 
 }
 
