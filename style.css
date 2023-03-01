@@ -9,7 +9,7 @@
 }
 
 body {
-    background-image:url(texture/Web.jpg);
+    background-image:url(texture/web.png);
     opacity: 0.9;
     filter: saturate(110%) brightness(105%);
     background-size: 100vw 100vh;
