@@ -5,31 +5,50 @@
     box-sizing:border-box;
     height:100vh;
     width:100vw;
-    background-image:url(texture/j002_爱给网_aigei_com.jpg);
+    
+}
+
+body {
+    background-image:url(texture/Web.jpg);
+    opacity: 0.9;
+    filter: saturate(110%) brightness(105%);
+    background-size: 100vw 100vh;
+    
 }
 
 .model {
     width:100vw;
     height:100vh;
+    z-index: 100;
+    overflow:visible;    
+}
+
+button{
+   
+    height:3vh;
+    width:3vh;
+    background-color:rgb(155, 141, 233);
+    border-radius: 50%;
+    border: none;
+    box-shadow: 5px 5px 15px rgba(155, 141, 233, 0.737);
     
 
-
-    
 }
 
 model-viewer {
-    width:70vw;
-    height:70vh;
-    top:15vh;
-    left:15vw;
+    width: 100vw;
+    height:100vh;
+    scale:0.65;
     overflow:visible;
+    background-color:transparent;
+    
 
 }
 
 
 model-viewer:hover {
 
-    transform: rotateY() rotateZ(360deg);
+    cursor: pointer;
 }
 
 #new_page {

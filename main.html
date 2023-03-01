@@ -8,17 +8,20 @@
 	</head>
 
 	<body>
+        
+        
 
 		<!-- Import the component -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
+    
         <!-- Use it like any other HTML element -->
         <div class="model" onclick="application.goToTargetView(event)" id="new_page">
-            <model-viewer 
-            alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" 
-            src="gltf/记忆宇宙.gltf" 
+            <model-viewer id="model"
+            alt="memory-station" 
+            src="gltf/记忆宇宙2.gltf" 
+            ar-scale="auto"
             ar environment-image="texture/moonless_golf_4k.hdr" 
-            shadow-intensity="1" 
+            shadow-intensity="0.5" 
             camera-controls 
             touch-action="pan-y" 
             auto-rotate 
@@ -26,12 +29,35 @@
             interaction-prompt="none"
             poster="gltf/poster1.webp"
             pre-load="auto"
-            >
-
             
+            >
+            
+            
+            <button class="button" slot="hotspot" position="10m 10m 3m" > 
+                <a href="https://xint998.github.io/Xinnnt-room/animation%20project/index.html" style="text-decoration:none">a</a>
+            </button> 
+
+            <button class="button" slot="hotspot" position="10m 10m 3m" > 
+                <a href="内置网页/内置网页/Qi_1.html" style="text-decoration:none">Congitive</a>
+            </button> 
+              
+        
+        
             </model-viewer>
         </div>
 
+
+    <script>
+        let model = document.getElementById('model');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            model.style.scale = value * 1.25 + '';
+        })
+
+    </script>
+
+    
 	</body>
 </html>
 
