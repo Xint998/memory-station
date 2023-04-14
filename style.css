@@ -23,15 +23,25 @@ body {
     overflow:visible;    
 }
 
-button{
-   
+.hotspot {
+    display:block;
+    width:20px;
+    height:20px;
+}
+
+.hotspot[slot="qi-1"] {
+    background-color: rgb(160, 196, 255);
+}
+
+button {
+    
     height:3vh;
     width:3vh;
     background-color:rgb(155, 141, 233);
     border-radius: 50%;
     border: none;
     box-shadow: 5px 5px 15px rgba(155, 141, 233, 0.737);
-    
+    transform: translate3d(-50%, -50%, 0)
 
 }
 

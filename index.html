@@ -15,7 +15,7 @@
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     
         <!-- Use it like any other HTML element -->
-        <div class="model" onclick="application.goToTargetView(event)" id="new_page">
+        <div class="model">
             <model-viewer id="model"
             alt="memory-station" 
             src="gltf/记忆宇宙2.gltf" 
@@ -30,14 +30,15 @@
             poster="gltf/poster1.webp"
             pre-load="auto"
             
+            camera-orbit="1m"
             >
             
             
-            <button class="button" slot="hotspot" position="10m 10m 3m" > 
+            <button class="hotspot" slot="qi-1" data-position="0.5m 0.5m 0.5m"> 
                 <a href="https://xint998.github.io/Xinnnt-room/animation%20project/index.html" style="text-decoration:none">a</a>
             </button> 
 
-            <button class="button" slot="hotspot" position="10m 10m 3m" > 
+            <button class="hotspot" slot="congitive-1" data-position="1m 1m 1m" > 
                 <a href="内置网页/内置网页/Qi_1.html" style="text-decoration:none">Congitive</a>
             </button> 
               
@@ -47,14 +48,23 @@
         </div>
 
 
-    <script>
-        let model = document.getElementById('model');
+    <script type="module">
+        const modelViewer =
+    document.querySelector("#hotspot-camera-view-demo");
+        const annotationClicked = (annotation) => {
+            let dataset = annotation.dataset;
+            modelViewer.cameraTarget = dataset.target;
+            modelViewer.cameraOrbit = dataset.orbit;
+            modelViewer. fieldOfView = '45deg';
+        }
 
-        window.addEventListener('scroll',function(){
-            let value = window.scrollY;
-            model.style.scale = value * 1.25 + '';
-        })
 
+    modelViewer2.querySelectorAll('button').forEach((hotspot)
+        => {
+            hotspot.addEvenListener('click', () =>
+        annotationClicked(hotspot));
+
+    });
     </script>
 
     
