@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3D旋转球体</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    #button-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 80%;
+    }
+    button {
+      background-color: purple;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <div id="button-container"></div>
+  <script>
+    // 创建场景、相机和渲染器
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // 创建球体
+    const sphereGeometry = new THREE.SphereGeometry(10, 64, 64);
+    const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+    const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+    scene.add(sphere);
+
+    // 在球体表面添加按钮
+    const buttonContainer = document.getElementById('button-container');
+    const buttonCount = 20; // 按钮数量
+    for (let i = 0; i < buttonCount; i++) {
+      const button = document.createElement('button');
+      button.innerText = `Button ${i+1}`;
+      button.addEventListener('click', () => alert(`Button ${i+1} clicked!`));
+      buttonContainer.appendChild(button);
+
+      // 将按钮添加到球体表面
+      const buttonPosition = new THREE.Vector3(
+        Math.random() - 0.5,
+        Math.random() - 0.5,
+        Math.random() - 0.5
+      ).normalize().multiplyScalar(10);
+      button.position.set(buttonPosition.x, buttonPosition.y, buttonPosition.z);
+      sphere.add(button);
+    }
+
+    // 设置相机位置
+    camera.position.z = 20;
+
+    // 定义动画函数
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // 使球体旋转
+      sphere.rotation.x += 0.01;
+      sphere.rotation.y += 0.01;
+
+      // 渲染场景
+      renderer.render(scene, camera);
+    }
+    animate();
+  </script>
+</body>
+</html>

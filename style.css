@@ -5,7 +5,7 @@
     box-sizing:border-box;
     height:100vh;
     width:100vw;
-    
+    font-family: ziyuyongsong;
 }
 
 body {
@@ -13,6 +13,7 @@ body {
     opacity: 0.9;
     filter: saturate(110%) brightness(105%);
     background-size: 100vw 100vh;
+    font-family: ziyuyongsong;
     
 }
 
@@ -33,21 +34,278 @@ body {
     background-color: rgb(160, 196, 255);
 }
 
+
+
+
 button {
-    
-    height:3vh;
-    width:3vh;
-    background-color:rgb(155, 141, 233);
+    position: absolute;
+    height:100px;
+    width:100px;
+    background-color:transparent;
     border-radius: 50%;
     border: none;
-    box-shadow: 5px 5px 15px rgba(155, 141, 233, 0.737);
-    transform: translate3d(-50%, -50%, 0)
-
+    font-size: 17px;
+    z-index:99;
+    color:rgba(0, 0, 0, 0.456);
+    overflow: visible;
+    
+    
+    
+    
 }
+
+.a1 {
+    top:-200px;
+    left:-250px;
+    animation: float1 5s ease-in-out infinite alternate;
+    
+}
+
+.a2 {
+    top:-300px;
+    left:-400px;
+    animation: float2 5s ease-in-out infinite alternate;
+}
+
+.a3 {
+    top:-300px;
+    left:180px;
+    animation: float3 5s ease-in-out infinite alternate;
+}
+
+.a4 {
+    top:-670px;
+    left:-320px;
+    animation: float3 5s ease-in-out infinite alternate;
+}
+.a5 {
+    top:-800px;
+    left:30px;
+    animation: float2 5s ease-in-out infinite alternate;
+}
+
+
+.a6 {
+    top:-820px;
+    left:-120px;
+    animation: float1 5s ease-in-out infinite alternate;
+}
+
+.a7 {
+    top:-750px;
+    left:0px;
+    animation: float2 3s ease-in-out infinite alternate;
+}
+.a8 {
+    top:-650px;
+    left:-120px;
+    animation: float3 5s ease-in-out infinite alternate;
+}
+.a9 {
+    top:-500px;
+    left:200px;
+    animation: float3 5s ease-in-out infinite alternate;
+}
+
+.a10 {
+    top:-550px;
+    left:20px;
+    animation: float2 5s ease-in-out infinite alternate;
+}
+
+.a11 {
+    top:-300px;
+    left:0px;
+    animation: float1 5s ease-in-out infinite alternate;
+}
+
+.a12 {
+    top:-600px;
+    left:-320px;
+    animation: float2 3s ease-in-out infinite alternate;
+}
+
+.a13 {
+    top:-140px;
+    left:-150px;
+    animation: float3 5s ease-in-out infinite alternate;
+}
+
+.a14 {
+    top:-720px;
+    left:100px;
+    animation: float3 5s ease-in-out infinite alternate;
+}
+
+.a15 {
+    top:-200px;
+    left:150px;
+    animation: float2 5s ease-in-out infinite alternate;
+}
+
+.a16 {
+    top:-430px;
+    left:-200px;
+    animation: float6 5s ease-in-out infinite alternate;
+}
+
+.a17 {
+    top:-180px;
+    left:-120px;
+    animation: float1 3s ease-in-out infinite alternate;
+}
+
+.a18 {
+    top:-500px;
+    left:-120px;
+    animation: float3 5s ease-in-out infinite alternate;
+}
+
+.a19 {
+    top:-450px;
+    left:30px;
+    animation: float3 5s ease-in-out infinite alternate;
+}
+
+.a20 {
+    top:-600px;
+    left:100px;
+    animation: float2 5s ease-in-out infinite alternate;
+}
+
+.a21 {
+    top:-440px;
+    left:180px;
+    animation: float1 5s ease-in-out infinite alternate;
+}
+
+.a22 {
+    top:-230px;
+    left:40px;
+    animation: float6 3s ease-in-out infinite alternate;
+}
+
+.a23 {
+    top:-280px;
+    left:-140px;
+    animation: float1 3s ease-in-out infinite alternate;
+}
+
+
+.a24 {
+    top:-550px;
+    left:-240px;
+    animation: float3 5s ease-in-out infinite alternate;
+}
+
+.a25 {
+    top:-480px;
+    left:-440px;
+    animation: float2 5s ease-in-out infinite alternate;
+}
+
+.a26 {
+    top:-160px;
+    left:30px;
+    animation: float1 5s ease-in-out infinite alternate;
+}
+
+.a27 {
+    top:-420px;
+    left:-430px;
+    animation: float3 5s ease-in-out infinite alternate;
+}
+
+.a28 {
+    top:-740px;
+    left:-180px;
+    animation: float1 3s ease-in-out infinite alternate;
+}
+
+.a29 {
+    top:-130px;
+    left:0px;
+    animation: float3 5s ease-in-out infinite alternate;
+}
+
+.a30 {
+    top:-300px;
+    left:50px;
+    animation: float2 5s ease-in-out infinite alternate;
+}
+
+.a31 {
+    top:-680px;
+    left:-240px;
+    animation: float1 5s ease-in-out infinite alternate;
+    
+}
+
+@keyframes float1 {
+    from {
+      transform: translateY(-30px) translateX(-100px);
+    }
+    to {
+      transform: translateY(30px) translateX(-50px);
+    }
+  }
+
+
+@keyframes float2 {
+    from {
+      transform: translateY(-30px) translateX(50px);
+    }
+    to {
+      transform: translateY(20px) translateX(80px);
+    }
+  }
+
+  @keyframes float3 {
+    from {
+      transform: translateY(30px) translateX(100px);
+    }
+    to {
+      transform: translateY(60px) translateX(130px);
+    }
+  }
+
+  @keyframes float4 {
+    from {
+      transform: translateY(60px) translateX(100px);
+    }
+    to {
+      transform: translateY(20px) translateX(130px);
+    }
+  }
+
+  @keyframes float5 {
+    from {
+      transform: translateY(60px) translateX(10px);
+    }
+    to {
+      transform: translateY(20px) translateX(-60px);
+    }
+  }
+
+  @keyframes float6 {
+    from {
+      transform: translateY(60px) translateX(-20px);
+    }
+    to {
+      transform: translateY(20px) translateX(-80px);
+    }
+  }
+
+  @font-face {
+    font-family: ziyuyongsong;
+    src: url(网站分页码/font/ZiYuYongSongTi-2.ttf);
+  }
+
 
 model-viewer {
     width: 100vw;
     height:100vh;
+    
     scale:0.65;
     overflow:visible;
     background-color:transparent;
@@ -56,10 +314,7 @@ model-viewer {
 }
 
 
-model-viewer:hover {
 
-    cursor: pointer;
-}
 
 #new_page {
     --web-animation: fadein undefineds undefined;
